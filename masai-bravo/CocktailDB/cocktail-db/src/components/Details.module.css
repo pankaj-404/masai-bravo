@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.card{
+    min-height: 80%;
+    width: 90%;
+    border: solid .1vw black ;
+    border-radius: 5px;
+    padding: 2% 5%;
+    margin: 10px 5%;
+    background-color: #fcefee;
+    align-items: center;
+    overflow-wrap: normal;
+    text-align: center;
+    justify-content: center;
+}
+
+button{
+    background-color: teal;
+    border-radius: 8px;
+    color: white;
+    margin: 5px 10px;
+    padding: 10px 20px;
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(.95);
+    opacity: .9;
+}
+
+button:focus{
+    background-color: tomato;
+}
+
+img{
+    height: 220px;
+    width: 220px;
+    padding: .5vw;
+
+}
+
+
+.left{
+    margin: .2vw;
+    margin-left: 5%;
+    float: left;
+
+}
+
+.right{
+    margin-right: 5%;
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+.f2{
+    font-size: 30px;
+    margin: .3vw;
+    color: #fc5c9c;
+}
+
+.f3{
+    font-size: 35px;
+    margin: .3vw;
+    color: #22d1ee;
+    font-weight: bolder;
+}
+
+.f1{
+    font-size: 20px;
+    margin: .3vw;
+    color: royalblue;
+}
+
+.half{
+    font-size: .5vw;
+    margin: .3vw;
+
+}
+
+table{
+    align-items: center;
+    margin: 0 20%;
+    margin-top: 10px;
+    padding: 10px;
+    min-width: 60%;
+    font-size: 20px;
+    transition: .5s;
+}
+
+td{
+    /* border: solid 2px gray; */
+    padding: 0 10px;
+    border-radius: 3px;
+
+}
+
+.title{
+ font-size: 25px;
+ color: darkblue;   
+}
+
+
+tr:nth-child(2n+0){
+    background-color: gray ;
+    
+}
+tr:nth-child(2n+1){
+    background-color: wheat;
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+}
+
+table:hover{
+    transform: scale(1.3);
+}
+
+@media only screen and (max-width: 600px) {
+    .details{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .card{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .card{
+        width: 70%;
+        margin-left: 10%;
+
+    }
+}

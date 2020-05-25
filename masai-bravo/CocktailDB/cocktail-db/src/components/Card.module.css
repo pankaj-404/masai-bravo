@@ -1,0 +1,107 @@
+.card{
+    height: 40%;
+    width: 30%;
+    border: solid .1vw black ;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 5px;
+    background-color: #fcefee;
+    align-items: center;
+    overflow-wrap: normal;
+    /* flex-direction: row; */
+}
+
+button{
+    background-color: teal;
+    border-radius: 8px;
+    color: white;
+    margin: .5vw;
+    padding: .5vw;
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(.95);
+    opacity: .9;
+}
+
+button:focus{
+    background-color: tomato;
+}
+
+img{
+    height: 220px;
+    width: 220px;
+    padding: .5vw;
+    transition: .5s ;
+}
+
+img:hover{
+    transform: skew(5deg);
+    opacity: .9;
+}
+
+.left{
+    margin: .2vw;
+    margin-left: 5%;
+    float: left;
+
+}
+
+.right{
+    margin-right: 5%;
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+.f2{
+    font-size: 30px;
+    margin: .3vw;
+    color: #fc5c9c;
+}
+
+.f3{
+    font-size: 35px;
+    margin: .3vw;
+    color: #22d1ee;
+}
+
+.f1{
+    font-size: 20px;
+    margin: .3vw;
+    color: royalblue;
+}
+
+.half{
+    font-size: .5vw;
+    margin: .3vm;
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .card {
+      width: 450px;
+      height: 350px;
+    }
+}
+
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+   .card{
+       width: 350px;
+       height: 350px;
+   }
+}
+
+  @media only screen and (min-width: 768px) {
+    /* For tablets: */
+   .card{
+       width: 350px;
+       height: 370px;
+   }
+}

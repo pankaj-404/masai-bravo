@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+
+.App {
+  text-align: center;
+  padding: 2% 2%;
+  background-image: linear-gradient(to right, rgb(198, 255, 221), rgb(251, 215, 134), rgb(247, 121, 125));
+  min-height: 610px;
+  /* margin: 2% 0; */
+}
+
+.flex{
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.left{
+  margin: .2vw;
+  margin-left: 5%;
+  float: left;
+
+}
+
+.right{
+  margin-right: 2%;
+  float: right;
+}
+
+.clear{
+  clear: both;
+}
+
+.logo{
+height: 50px;
+width: 60px;
+}
+
+
+input:focus{
+  border: solid 2px rgb(134, 218, 9);
+  border-radius: 5px;
+}
+
+select{
+  height: 50px;
+  margin: 0 1vw 0 2vw;
+}
+
+select:focus{
+  border: solid 2px rgb(134, 218, 9);
+  border-radius: 5px;
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+}
+
+.search{
+  display: flex;
+  flex-direction: row;
+  float: right !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav{
+    justify-content: right;
+    /* align-items: right; */
+  }
+
+  .select{
+    display: none;
+  }
+
+  .type{
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  .nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .select{
+    display: flex;
+  flex-direction: row;
+  }
+
+  .type{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .nav{
+    display: flex;
+    flex-direction: row;
+  }
+  .select{
+    display: flex;
+    flex-direction: column;
+    margin: 0 1vw 0 2vw;
+  }
+  .logo{
+    height: 60px;
+    width: 100px;
+    margin-top: -20px;
+    margin-bottom: 2px;
+
+  }
+
+  .select{
+    display: block;
+  }
+
+  .type{
+    display: block;
+  }
+
+}
+
+.loader {
+  margin-left: 45%;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid hsl(4, 100%, 50%);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
