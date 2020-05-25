@@ -21,9 +21,9 @@ export default class App extends React.Component {
       isLoading: false,
       isCard: true,
       isDetails: false,
-      start: 1,
+      start: 0,
       end: 6,
-      perPage: []
+      page: 1
     }
   }
 
@@ -76,6 +76,9 @@ export default class App extends React.Component {
           isLoading: false,
           isCard: true,
           isDetails: false,
+          start: 0,
+          end: 6,
+          page: 1
         })
       })
   }
@@ -90,6 +93,9 @@ export default class App extends React.Component {
       .then(res => {
         // console.log(res.data)
         this.setState({
+          start: 0,
+          end: 6,
+          page: 1,
           data: res.data.drinks,
           isLoading: false,
           isCard: true,
@@ -105,6 +111,9 @@ export default class App extends React.Component {
     // console.log(search)
     this.setState({
       search: search,
+      start: 0,
+      end: 6,
+      page:1
     })
   }
 
@@ -187,7 +196,7 @@ export default class App extends React.Component {
 
 
   render() {
-    const {page, data, isLoading, cocktail, isCard, isDetails, ingredients, alcoholic, categories, perPage, start, end } = this.state
+    const { page, data, isLoading, cocktail, isCard, isDetails, ingredients, alcoholic, categories, perPage, start, end } = this.state
     console.log(page)
     return (
       <div className={style.App}>
@@ -204,7 +213,7 @@ export default class App extends React.Component {
             {!isLoading && isDetails && cocktail.length > 0 && <Details cocktail={this.state.cocktail} back={this.back} />}
           </div>
 
-          <div style={{display:"flex"}}>
+          <div style={{ display: "flex" }}>
             {/* {<button onClick={this.handleprevious} name="pre">&#8810;</button>} */}
             {<Pagination data={data} handlePage={this.handlePage} />}
             {/* { <button onClick={this.handleNext} name="next">&#8811;</button> } */}
